@@ -1,1 +1,1 @@
-# Gen-AI-Financial-Assistant
+# GenAI-Financial-Assistant
