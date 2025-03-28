@@ -6,7 +6,7 @@ import altair as alt
 from datetime import datetime, timedelta
 
 # Configure API keys
-API_KEY = "AIzaSyCm7xqjOcx_ddNaFU6RntsDWoYD_y0SKQ4"
+API_KEY = st.secrets["api_key"]
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel("gemini-2.0-flash")
 
