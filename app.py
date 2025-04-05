@@ -58,7 +58,7 @@ st.write("Your AI-powered guide to smarter investing decisions!")
 
 # Sidebar for navigation
 st.sidebar.header("Navigation")
-page = st.sidebar.radio("Go to", ["Chatbot", "Stock Analysis", "Investment Tips", "About"])
+page = st.sidebar.radio("Go to", ["Chatbot", "Stock Analysis", "Insurance Policies", "Investment Tips", "About"])
 
 # 📌 About Section
 if page == "About":
