@@ -5,7 +5,6 @@ import pandas as pd
 import altair as alt
 from datetime import datetime, timedelta
 
-# Configure API keys
 API_KEY = st.secrets["API_KEY"]
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel("gemini-2.0-flash")
@@ -226,7 +225,7 @@ elif page == "Stock Analysis":
                         ]
                     )
                 
-                    # Combine charts
+                    
                     chart = (line1 + line2).properties(
                         width=800,
                         height=400
@@ -246,6 +245,30 @@ elif page == "Stock Analysis":
                         response = model.generate_content(prompt)
                         st.subheader("💡 Comparison Analysis")
                         st.write(response.text)
+                        
+# 🛡️ Insurance Policies Section
+elif page == "Insurance Policies":
+    st.header("🛡️ Insurance Policy Advisor")
+    st.write("Explore key insurance policies relevant to your financial planning.")
+
+    st.subheader("📋 Categories of Insurance Policies")
+    st.markdown("""
+    - **Health Insurance**
+    - **Life Insurance**
+    - **Term Insurance**
+    - **Critical Illness Insurance**
+    - **Personal Accident Insurance**
+    - **Motor Insurance**
+    - **Home Insurance**
+    - **Travel Insurance**
+    - **Retirement Plans (Pension Insurance)**
+    - **Child Plans**
+    - **ULIPs (Unit Linked Insurance Plans)**
+    - **Endowment Plans**
+    - **Whole Life Insurance**
+    """)
+    st.info("📌 More personalized suggestions will be available when linked to user profiles in the future.")
+
 # 🤖 Chatbot Section
 elif page == "Chatbot":
     st.header("🤖 Chat with the AI Financial Assistant")
